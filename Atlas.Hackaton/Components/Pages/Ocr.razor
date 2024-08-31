@@ -1,0 +1,22 @@
+@page "/ocr"
+@attribute [StreamRendering]
+
+<PageTitle>OCR</PageTitle>
+
+<div class="row">
+    <div class="col-6">
+        <InputFile OnChange="LoadFiles" multiple />
+    </div>
+    <div class="col-6">
+        <pre>@DocAsJson</pre>
+    </div>
+</div>
+
+@code {
+    private string DocAsJson { get; set; } = default!;
+
+    private void LoadFiles(InputFileChangeEventArgs e)
+    {
+
+    }
+}
